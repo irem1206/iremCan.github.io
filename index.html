@@ -3,15 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İrem Can | Portfolyo</title>
+    <title>İrem Can | </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-dark.min.css">
     <style>
-        body { 
-            background-color: #000000 !important; 
-            margin: 0; 
-            display: flex; 
-            justify-content: center; 
-        }
+        body { background-color: #000000 !important; margin: 0; display: flex; justify-content: center; }
         .markdown-body { 
             box-sizing: border-box; 
             min-width: 200px; 
@@ -27,12 +22,29 @@
 </head>
 <body class="markdown-body">
     <div id="content">Yükleniyor...</div>
+
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
         fetch('README.md')
             .then(response => response.text())
             .then(text => {
-                document.getElementById('content').innerHTML = marked.parse(text);
+                // Tüm emoji kodlarını gerçek simgelere çeviren genişletilmiş liste
+                const emojiMap = {
+                    ':technologist:': '🧑‍💻',
+                    ':mortar_board:': '🎓',
+                    ':star:': '⭐',
+                    ':file_folder:': '📁',
+                    ':wrench:': '🔧',
+                    ':bar_chart:': '📊',
+                    ':video_game:': '🎮'
+                };
+                
+                let updatedText = text;
+                for (const [key, value] of Object.entries(emojiMap)) {
+                    updatedText = updatedText.replace(new RegExp(key, 'g'), value);
+                }
+
+                document.getElementById('content').innerHTML = marked.parse(updatedText);
             });
     </script>
 </body>
