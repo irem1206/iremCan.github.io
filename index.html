@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İrem Can | Portfolyo</title>
-    <!-- GitHub Dark Teması -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-dark.min.css">
     <style>
-        /* Arka planı tam siyah yapıyoruz */
         body { 
             background-color: #000000 !important; 
             margin: 0; 
@@ -20,22 +18,20 @@
             max-width: 980px; 
             margin: 0 auto; 
             padding: 45px; 
-            background-color: #000000 !important; /* İçerik alanı da siyah */
+            background-color: #000000 !important; 
             color: #c9d1d9;
         }
         @media (max-width: 767px) { .markdown-body { padding: 15px; } }
-        img { max-width: 100%; }
+        img { max-width: 100%; display: inline-block; vertical-align: middle; }
     </style>
 </head>
 <body class="markdown-body">
     <div id="content">Yükleniyor...</div>
-
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
         fetch('README.md')
             .then(response => response.text())
             .then(text => {
-                // Markdown içeriğini HTML'e dönüştürür
                 document.getElementById('content').innerHTML = marked.parse(text);
             });
     </script>
