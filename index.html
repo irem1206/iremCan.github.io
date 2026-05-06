@@ -28,7 +28,7 @@
         fetch('README.md')
             .then(response => response.text())
             .then(text => {
-                // Tüm emoji kodlarını gerçek simgelere çeviren genişletilmiş liste
+                // Tüm emoji kodlarını (örn: :star:) gerçek emojilere çevirir
                 const emojiMap = {
                     ':technologist:': '🧑‍💻',
                     ':mortar_board:': '🎓',
@@ -40,9 +40,9 @@
                 };
                 
                 let updatedText = text;
-                for (const [key, value] of Object.entries(emojiMap)) {
-                    updatedText = updatedText.replace(new RegExp(key, 'g'), value);
-                }
+                Object.keys(emojiMap).forEach(key => {
+                    updatedText = updatedText.split(key).join(emojiMap[key]);
+                });
 
                 document.getElementById('content').innerHTML = marked.parse(updatedText);
             });
