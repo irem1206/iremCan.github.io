@@ -1,4 +1,4 @@
-# irem1206.github.io
+
 ![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,12,19,27&height=200&section=header&text=%C4%B0rem%20Can&fontSize=42&fontColor=ffffff&fontAlignY=35&desc=Bilgisayar%20Programc%C4%B1l%C4%B1%C4%9F%C4%B1%20%C3%96%C4%9Frencisi%20%7C%20Junior%20Developer&descSize=16&descColor=ffffff&descAlignY=55&animation=fadeIn)
 
 <p align="center">
