@@ -66,7 +66,6 @@ analitik düşünebilen biriyim. Kendimi sürekli geliştirmeye ve yeni becerile
 *   **AFAD Gönüllüsü:** Afet Bilinci ve Eğitimi programı katılımı (03.01.2025).
 
 ![divider](https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,12,19,27&height=2)
-
 ## :file_folder: Projeler
 
 ### 🎮 Akıl Adası (02/2025 - Mevcut)
